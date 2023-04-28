@@ -5,6 +5,7 @@ import 'package:note_app/domain/model/note.dart';
 import 'package:note_app/presentation/add_edit_note/add_edit_note_screen.dart';
 import 'package:note_app/presentation/add_edit_note/add_edit_note_view_model.dart';
 import 'package:note_app/presentation/notes/component/note_item.dart';
+import 'package:note_app/presentation/notes/component/order_section.dart';
 import 'package:note_app/presentation/notes/note_event.dart';
 import 'package:note_app/presentation/notes/note_view_model.dart';
 import 'package:provider/provider.dart';
@@ -33,7 +34,9 @@ class _NoteScreenState extends State<NoteScreen> {
         centerTitle: false,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              viewModel.onEvent(event: const NoteEvent.toggleOrderSection());
+            },
             icon: const Icon(Icons.sort),
           ),
         ],
@@ -42,32 +45,49 @@ class _NoteScreenState extends State<NoteScreen> {
         onPressed: () => _navigateAddEditNoteScreen(viewModel),
         child: const Icon(Icons.add),
       ),
-      body: ListView.separated(
-        padding: const EdgeInsets.all(16.0),
-        itemBuilder: (_, index) {
-          final note = state.notes[index];
-          return NoteItem.fromModel(
-            note: note,
-            onTap: () => _navigateAddEditNoteScreen(viewModel, note: note),
-            onDeleteTap: () {
-              viewModel.onEvent(event: NoteEvent.delete(note));
+      body: Column(
+        children: [
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 300),
+            child: state.isToggleOrderSection
+                ? OrderSection(
+                    orderType: state.orderType,
+                    onChanged: (value) {
+                      viewModel.onEvent(event: NoteEvent.changeOrder(value));
+                    },
+                  )
+                : Container(),
+          ),
+          Expanded(
+            child: ListView.separated(
+              padding: const EdgeInsets.all(16.0),
+              itemBuilder: (_, index) {
+                final note = state.notes[index];
+                return NoteItem.fromModel(
+                  note: note,
+                  onTap: () =>
+                      _navigateAddEditNoteScreen(viewModel, note: note),
+                  onDeleteTap: () {
+                    viewModel.onEvent(event: NoteEvent.delete(note));
 
-              final snackBar = SnackBar(
-                content: const Text("삭제되었습니다."),
-                action: SnackBarAction(
-                  onPressed: () {
-                    viewModel.onEvent(event: const NoteEvent.restore());
+                    final snackBar = SnackBar(
+                      content: const Text("삭제되었습니다."),
+                      action: SnackBarAction(
+                        onPressed: () {
+                          viewModel.onEvent(event: const NoteEvent.restore());
+                        },
+                        label: "취소",
+                      ),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   },
-                  label: "취소",
-                ),
-              );
-
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            },
-          );
-        },
-        separatorBuilder: (_, __) => const SizedBox(height: 16.0),
-        itemCount: state.notes.length,
+                );
+              },
+              separatorBuilder: (_, __) => const SizedBox(height: 16.0),
+              itemCount: state.notes.length,
+            ),
+          ),
+        ],
       ),
     );
   }

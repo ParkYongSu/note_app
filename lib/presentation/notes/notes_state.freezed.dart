@@ -17,6 +17,8 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$NotesState {
   List<Note> get notes => throw _privateConstructorUsedError;
+  OrderType get orderType => throw _privateConstructorUsedError;
+  bool get isToggleOrderSection => throw _privateConstructorUsedError;
   Note? get currentDeletedNote => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -30,8 +32,13 @@ abstract class $NotesStateCopyWith<$Res> {
           NotesState value, $Res Function(NotesState) then) =
       _$NotesStateCopyWithImpl<$Res, NotesState>;
   @useResult
-  $Res call({List<Note> notes, Note? currentDeletedNote});
+  $Res call(
+      {List<Note> notes,
+      OrderType orderType,
+      bool isToggleOrderSection,
+      Note? currentDeletedNote});
 
+  $OrderTypeCopyWith<$Res> get orderType;
   $NoteCopyWith<$Res>? get currentDeletedNote;
 }
 
@@ -49,6 +56,8 @@ class _$NotesStateCopyWithImpl<$Res, $Val extends NotesState>
   @override
   $Res call({
     Object? notes = null,
+    Object? orderType = null,
+    Object? isToggleOrderSection = null,
     Object? currentDeletedNote = freezed,
   }) {
     return _then(_value.copyWith(
@@ -56,11 +65,27 @@ class _$NotesStateCopyWithImpl<$Res, $Val extends NotesState>
           ? _value.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as List<Note>,
+      orderType: null == orderType
+          ? _value.orderType
+          : orderType // ignore: cast_nullable_to_non_nullable
+              as OrderType,
+      isToggleOrderSection: null == isToggleOrderSection
+          ? _value.isToggleOrderSection
+          : isToggleOrderSection // ignore: cast_nullable_to_non_nullable
+              as bool,
       currentDeletedNote: freezed == currentDeletedNote
           ? _value.currentDeletedNote
           : currentDeletedNote // ignore: cast_nullable_to_non_nullable
               as Note?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $OrderTypeCopyWith<$Res> get orderType {
+    return $OrderTypeCopyWith<$Res>(_value.orderType, (value) {
+      return _then(_value.copyWith(orderType: value) as $Val);
+    });
   }
 
   @override
@@ -84,8 +109,14 @@ abstract class _$$_NotesStateCopyWith<$Res>
       __$$_NotesStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Note> notes, Note? currentDeletedNote});
+  $Res call(
+      {List<Note> notes,
+      OrderType orderType,
+      bool isToggleOrderSection,
+      Note? currentDeletedNote});
 
+  @override
+  $OrderTypeCopyWith<$Res> get orderType;
   @override
   $NoteCopyWith<$Res>? get currentDeletedNote;
 }
@@ -102,6 +133,8 @@ class __$$_NotesStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? notes = null,
+    Object? orderType = null,
+    Object? isToggleOrderSection = null,
     Object? currentDeletedNote = freezed,
   }) {
     return _then(_$_NotesState(
@@ -109,6 +142,14 @@ class __$$_NotesStateCopyWithImpl<$Res>
           ? _value._notes
           : notes // ignore: cast_nullable_to_non_nullable
               as List<Note>,
+      orderType: null == orderType
+          ? _value.orderType
+          : orderType // ignore: cast_nullable_to_non_nullable
+              as OrderType,
+      isToggleOrderSection: null == isToggleOrderSection
+          ? _value.isToggleOrderSection
+          : isToggleOrderSection // ignore: cast_nullable_to_non_nullable
+              as bool,
       currentDeletedNote: freezed == currentDeletedNote
           ? _value.currentDeletedNote
           : currentDeletedNote // ignore: cast_nullable_to_non_nullable
@@ -120,7 +161,11 @@ class __$$_NotesStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_NotesState implements _NotesState {
-  _$_NotesState({required final List<Note> notes, this.currentDeletedNote})
+  _$_NotesState(
+      {required final List<Note> notes,
+      required this.orderType,
+      required this.isToggleOrderSection,
+      this.currentDeletedNote})
       : _notes = notes;
 
   final List<Note> _notes;
@@ -132,11 +177,15 @@ class _$_NotesState implements _NotesState {
   }
 
   @override
+  final OrderType orderType;
+  @override
+  final bool isToggleOrderSection;
+  @override
   final Note? currentDeletedNote;
 
   @override
   String toString() {
-    return 'NotesState(notes: $notes, currentDeletedNote: $currentDeletedNote)';
+    return 'NotesState(notes: $notes, orderType: $orderType, isToggleOrderSection: $isToggleOrderSection, currentDeletedNote: $currentDeletedNote)';
   }
 
   @override
@@ -145,13 +194,21 @@ class _$_NotesState implements _NotesState {
         (other.runtimeType == runtimeType &&
             other is _$_NotesState &&
             const DeepCollectionEquality().equals(other._notes, _notes) &&
+            (identical(other.orderType, orderType) ||
+                other.orderType == orderType) &&
+            (identical(other.isToggleOrderSection, isToggleOrderSection) ||
+                other.isToggleOrderSection == isToggleOrderSection) &&
             (identical(other.currentDeletedNote, currentDeletedNote) ||
                 other.currentDeletedNote == currentDeletedNote));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_notes), currentDeletedNote);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_notes),
+      orderType,
+      isToggleOrderSection,
+      currentDeletedNote);
 
   @JsonKey(ignore: true)
   @override
@@ -163,10 +220,16 @@ class _$_NotesState implements _NotesState {
 abstract class _NotesState implements NotesState {
   factory _NotesState(
       {required final List<Note> notes,
+      required final OrderType orderType,
+      required final bool isToggleOrderSection,
       final Note? currentDeletedNote}) = _$_NotesState;
 
   @override
   List<Note> get notes;
+  @override
+  OrderType get orderType;
+  @override
+  bool get isToggleOrderSection;
   @override
   Note? get currentDeletedNote;
   @override
