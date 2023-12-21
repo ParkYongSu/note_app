@@ -92,22 +92,24 @@ class _$NoteEventCopyWithImpl<$Res, $Val extends NoteEvent>
 }
 
 /// @nodoc
-abstract class _$$LoadCopyWith<$Res> {
-  factory _$$LoadCopyWith(_$Load value, $Res Function(_$Load) then) =
-      __$$LoadCopyWithImpl<$Res>;
+abstract class _$$LoadImplCopyWith<$Res> {
+  factory _$$LoadImplCopyWith(
+          _$LoadImpl value, $Res Function(_$LoadImpl) then) =
+      __$$LoadImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadCopyWithImpl<$Res> extends _$NoteEventCopyWithImpl<$Res, _$Load>
-    implements _$$LoadCopyWith<$Res> {
-  __$$LoadCopyWithImpl(_$Load _value, $Res Function(_$Load) _then)
+class __$$LoadImplCopyWithImpl<$Res>
+    extends _$NoteEventCopyWithImpl<$Res, _$LoadImpl>
+    implements _$$LoadImplCopyWith<$Res> {
+  __$$LoadImplCopyWithImpl(_$LoadImpl _value, $Res Function(_$LoadImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Load implements Load {
-  const _$Load();
+class _$LoadImpl implements Load {
+  const _$LoadImpl();
 
   @override
   String toString() {
@@ -115,9 +117,9 @@ class _$Load implements Load {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Load);
+        (other.runtimeType == runtimeType && other is _$LoadImpl);
   }
 
   @override
@@ -205,13 +207,14 @@ class _$Load implements Load {
 }
 
 abstract class Load implements NoteEvent {
-  const factory Load() = _$Load;
+  const factory Load() = _$LoadImpl;
 }
 
 /// @nodoc
-abstract class _$$DeleteCopyWith<$Res> {
-  factory _$$DeleteCopyWith(_$Delete value, $Res Function(_$Delete) then) =
-      __$$DeleteCopyWithImpl<$Res>;
+abstract class _$$DeleteImplCopyWith<$Res> {
+  factory _$$DeleteImplCopyWith(
+          _$DeleteImpl value, $Res Function(_$DeleteImpl) then) =
+      __$$DeleteImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Note note});
 
@@ -219,10 +222,11 @@ abstract class _$$DeleteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$DeleteCopyWithImpl<$Res>
-    extends _$NoteEventCopyWithImpl<$Res, _$Delete>
-    implements _$$DeleteCopyWith<$Res> {
-  __$$DeleteCopyWithImpl(_$Delete _value, $Res Function(_$Delete) _then)
+class __$$DeleteImplCopyWithImpl<$Res>
+    extends _$NoteEventCopyWithImpl<$Res, _$DeleteImpl>
+    implements _$$DeleteImplCopyWith<$Res> {
+  __$$DeleteImplCopyWithImpl(
+      _$DeleteImpl _value, $Res Function(_$DeleteImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -230,7 +234,7 @@ class __$$DeleteCopyWithImpl<$Res>
   $Res call({
     Object? note = null,
   }) {
-    return _then(_$Delete(
+    return _then(_$DeleteImpl(
       null == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
@@ -249,8 +253,8 @@ class __$$DeleteCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$Delete implements Delete {
-  const _$Delete(this.note);
+class _$DeleteImpl implements Delete {
+  const _$DeleteImpl(this.note);
 
   @override
   final Note note;
@@ -261,10 +265,10 @@ class _$Delete implements Delete {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Delete &&
+            other is _$DeleteImpl &&
             (identical(other.note, note) || other.note == note));
   }
 
@@ -274,8 +278,8 @@ class _$Delete implements Delete {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteCopyWith<_$Delete> get copyWith =>
-      __$$DeleteCopyWithImpl<_$Delete>(this, _$identity);
+  _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
+      __$$DeleteImplCopyWithImpl<_$DeleteImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -359,32 +363,34 @@ class _$Delete implements Delete {
 }
 
 abstract class Delete implements NoteEvent {
-  const factory Delete(final Note note) = _$Delete;
+  const factory Delete(final Note note) = _$DeleteImpl;
 
   Note get note;
   @JsonKey(ignore: true)
-  _$$DeleteCopyWith<_$Delete> get copyWith =>
+  _$$DeleteImplCopyWith<_$DeleteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RestoreCopyWith<$Res> {
-  factory _$$RestoreCopyWith(_$Restore value, $Res Function(_$Restore) then) =
-      __$$RestoreCopyWithImpl<$Res>;
+abstract class _$$RestoreImplCopyWith<$Res> {
+  factory _$$RestoreImplCopyWith(
+          _$RestoreImpl value, $Res Function(_$RestoreImpl) then) =
+      __$$RestoreImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RestoreCopyWithImpl<$Res>
-    extends _$NoteEventCopyWithImpl<$Res, _$Restore>
-    implements _$$RestoreCopyWith<$Res> {
-  __$$RestoreCopyWithImpl(_$Restore _value, $Res Function(_$Restore) _then)
+class __$$RestoreImplCopyWithImpl<$Res>
+    extends _$NoteEventCopyWithImpl<$Res, _$RestoreImpl>
+    implements _$$RestoreImplCopyWith<$Res> {
+  __$$RestoreImplCopyWithImpl(
+      _$RestoreImpl _value, $Res Function(_$RestoreImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Restore implements Restore {
-  const _$Restore();
+class _$RestoreImpl implements Restore {
+  const _$RestoreImpl();
 
   @override
   String toString() {
@@ -392,9 +398,9 @@ class _$Restore implements Restore {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Restore);
+        (other.runtimeType == runtimeType && other is _$RestoreImpl);
   }
 
   @override
@@ -482,14 +488,14 @@ class _$Restore implements Restore {
 }
 
 abstract class Restore implements NoteEvent {
-  const factory Restore() = _$Restore;
+  const factory Restore() = _$RestoreImpl;
 }
 
 /// @nodoc
-abstract class _$$ChangeOrderCopyWith<$Res> {
-  factory _$$ChangeOrderCopyWith(
-          _$ChangeOrder value, $Res Function(_$ChangeOrder) then) =
-      __$$ChangeOrderCopyWithImpl<$Res>;
+abstract class _$$ChangeOrderImplCopyWith<$Res> {
+  factory _$$ChangeOrderImplCopyWith(
+          _$ChangeOrderImpl value, $Res Function(_$ChangeOrderImpl) then) =
+      __$$ChangeOrderImplCopyWithImpl<$Res>;
   @useResult
   $Res call({OrderType type});
 
@@ -497,11 +503,11 @@ abstract class _$$ChangeOrderCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$ChangeOrderCopyWithImpl<$Res>
-    extends _$NoteEventCopyWithImpl<$Res, _$ChangeOrder>
-    implements _$$ChangeOrderCopyWith<$Res> {
-  __$$ChangeOrderCopyWithImpl(
-      _$ChangeOrder _value, $Res Function(_$ChangeOrder) _then)
+class __$$ChangeOrderImplCopyWithImpl<$Res>
+    extends _$NoteEventCopyWithImpl<$Res, _$ChangeOrderImpl>
+    implements _$$ChangeOrderImplCopyWith<$Res> {
+  __$$ChangeOrderImplCopyWithImpl(
+      _$ChangeOrderImpl _value, $Res Function(_$ChangeOrderImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -509,7 +515,7 @@ class __$$ChangeOrderCopyWithImpl<$Res>
   $Res call({
     Object? type = null,
   }) {
-    return _then(_$ChangeOrder(
+    return _then(_$ChangeOrderImpl(
       null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -528,8 +534,8 @@ class __$$ChangeOrderCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ChangeOrder implements ChangeOrder {
-  const _$ChangeOrder(this.type);
+class _$ChangeOrderImpl implements ChangeOrder {
+  const _$ChangeOrderImpl(this.type);
 
   @override
   final OrderType type;
@@ -540,10 +546,10 @@ class _$ChangeOrder implements ChangeOrder {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ChangeOrder &&
+            other is _$ChangeOrderImpl &&
             (identical(other.type, type) || other.type == type));
   }
 
@@ -553,8 +559,8 @@ class _$ChangeOrder implements ChangeOrder {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangeOrderCopyWith<_$ChangeOrder> get copyWith =>
-      __$$ChangeOrderCopyWithImpl<_$ChangeOrder>(this, _$identity);
+  _$$ChangeOrderImplCopyWith<_$ChangeOrderImpl> get copyWith =>
+      __$$ChangeOrderImplCopyWithImpl<_$ChangeOrderImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -638,34 +644,34 @@ class _$ChangeOrder implements ChangeOrder {
 }
 
 abstract class ChangeOrder implements NoteEvent {
-  const factory ChangeOrder(final OrderType type) = _$ChangeOrder;
+  const factory ChangeOrder(final OrderType type) = _$ChangeOrderImpl;
 
   OrderType get type;
   @JsonKey(ignore: true)
-  _$$ChangeOrderCopyWith<_$ChangeOrder> get copyWith =>
+  _$$ChangeOrderImplCopyWith<_$ChangeOrderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ToggleOrderSectionCopyWith<$Res> {
-  factory _$$ToggleOrderSectionCopyWith(_$ToggleOrderSection value,
-          $Res Function(_$ToggleOrderSection) then) =
-      __$$ToggleOrderSectionCopyWithImpl<$Res>;
+abstract class _$$ToggleOrderSectionImplCopyWith<$Res> {
+  factory _$$ToggleOrderSectionImplCopyWith(_$ToggleOrderSectionImpl value,
+          $Res Function(_$ToggleOrderSectionImpl) then) =
+      __$$ToggleOrderSectionImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ToggleOrderSectionCopyWithImpl<$Res>
-    extends _$NoteEventCopyWithImpl<$Res, _$ToggleOrderSection>
-    implements _$$ToggleOrderSectionCopyWith<$Res> {
-  __$$ToggleOrderSectionCopyWithImpl(
-      _$ToggleOrderSection _value, $Res Function(_$ToggleOrderSection) _then)
+class __$$ToggleOrderSectionImplCopyWithImpl<$Res>
+    extends _$NoteEventCopyWithImpl<$Res, _$ToggleOrderSectionImpl>
+    implements _$$ToggleOrderSectionImplCopyWith<$Res> {
+  __$$ToggleOrderSectionImplCopyWithImpl(_$ToggleOrderSectionImpl _value,
+      $Res Function(_$ToggleOrderSectionImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ToggleOrderSection implements ToggleOrderSection {
-  const _$ToggleOrderSection();
+class _$ToggleOrderSectionImpl implements ToggleOrderSection {
+  const _$ToggleOrderSectionImpl();
 
   @override
   String toString() {
@@ -673,9 +679,9 @@ class _$ToggleOrderSection implements ToggleOrderSection {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ToggleOrderSection);
+        (other.runtimeType == runtimeType && other is _$ToggleOrderSectionImpl);
   }
 
   @override
@@ -763,5 +769,5 @@ class _$ToggleOrderSection implements ToggleOrderSection {
 }
 
 abstract class ToggleOrderSection implements NoteEvent {
-  const factory ToggleOrderSection() = _$ToggleOrderSection;
+  const factory ToggleOrderSection() = _$ToggleOrderSectionImpl;
 }

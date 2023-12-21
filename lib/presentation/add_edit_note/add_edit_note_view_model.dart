@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
 import 'package:note_app/domain/model/note.dart';
 import 'package:note_app/domain/repository/note_repository.dart';
 import 'package:note_app/presentation/add_edit_note/add_edit_note_event.dart';
@@ -8,6 +8,7 @@ import 'package:note_app/presentation/add_edit_note/add_edit_note_state.dart';
 import 'package:note_app/presentation/add_edit_note/add_edit_note_ui_event.dart';
 import 'package:note_app/ui/colors.dart';
 
+@injectable
 class AddEditNoteViewModel extends ChangeNotifier {
   final NoteRepository repository;
 
@@ -79,14 +80,5 @@ class AddEditNoteViewModel extends ChangeNotifier {
     }
 
     _streamController.add(const AddEditNoteUIEvent.save());
-  }
-
-  void init({Note? note}) {
-    _state = _state.copyWith(
-      title: note?.title ?? "",
-      content: note?.content ?? "",
-      color: note?.color ?? roseBud.value,
-      id: note?.id,
-    );
   }
 }

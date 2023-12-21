@@ -1,9 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:note_app/domain/model/note.dart';
-import 'package:note_app/presentation/add_edit_note/add_edit_note_screen.dart';
-import 'package:note_app/presentation/add_edit_note/add_edit_note_view_model.dart';
 import 'package:note_app/presentation/notes/component/note_item.dart';
 import 'package:note_app/presentation/notes/component/order_section.dart';
 import 'package:note_app/presentation/notes/note_event.dart';
@@ -42,7 +41,7 @@ class _NoteScreenState extends State<NoteScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => _navigateAddEditNoteScreen(viewModel),
+        onPressed: () => _navigateAddEditNoteScreen("/add_note", viewModel),
         child: const Icon(Icons.add),
       ),
       body: Column(
@@ -66,7 +65,7 @@ class _NoteScreenState extends State<NoteScreen> {
                 return NoteItem.fromModel(
                   note: note,
                   onTap: () =>
-                      _navigateAddEditNoteScreen(viewModel, note: note),
+                      _navigateAddEditNoteScreen("/edit_note", viewModel, note: note),
                   onDeleteTap: () {
                     viewModel.onEvent(event: NoteEvent.delete(note));
 
@@ -93,18 +92,11 @@ class _NoteScreenState extends State<NoteScreen> {
   }
 
   Future<void> _navigateAddEditNoteScreen(
+    String path,
     NoteViewModel viewModel, {
     Note? note,
   }) async {
-    final isSave = await Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) {
-          context.read<AddEditNoteViewModel>().init(note: note);
-          return const AddEditNoteScreen();
-        },
-      ),
-    );
+    final bool? isSave = await context.push(path, extra: note);
 
     if (isSave ?? false) {
       viewModel.onEvent(event: const NoteEvent.load());

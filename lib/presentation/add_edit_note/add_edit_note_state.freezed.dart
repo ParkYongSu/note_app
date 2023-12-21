@@ -75,22 +75,22 @@ class _$AddEditNoteStateCopyWithImpl<$Res, $Val extends AddEditNoteState>
 }
 
 /// @nodoc
-abstract class _$$_AddEditNoteStateCopyWith<$Res>
+abstract class _$$AddEditNoteStateImplCopyWith<$Res>
     implements $AddEditNoteStateCopyWith<$Res> {
-  factory _$$_AddEditNoteStateCopyWith(
-          _$_AddEditNoteState value, $Res Function(_$_AddEditNoteState) then) =
-      __$$_AddEditNoteStateCopyWithImpl<$Res>;
+  factory _$$AddEditNoteStateImplCopyWith(_$AddEditNoteStateImpl value,
+          $Res Function(_$AddEditNoteStateImpl) then) =
+      __$$AddEditNoteStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String title, String content, int color, int? id});
 }
 
 /// @nodoc
-class __$$_AddEditNoteStateCopyWithImpl<$Res>
-    extends _$AddEditNoteStateCopyWithImpl<$Res, _$_AddEditNoteState>
-    implements _$$_AddEditNoteStateCopyWith<$Res> {
-  __$$_AddEditNoteStateCopyWithImpl(
-      _$_AddEditNoteState _value, $Res Function(_$_AddEditNoteState) _then)
+class __$$AddEditNoteStateImplCopyWithImpl<$Res>
+    extends _$AddEditNoteStateCopyWithImpl<$Res, _$AddEditNoteStateImpl>
+    implements _$$AddEditNoteStateImplCopyWith<$Res> {
+  __$$AddEditNoteStateImplCopyWithImpl(_$AddEditNoteStateImpl _value,
+      $Res Function(_$AddEditNoteStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_AddEditNoteStateCopyWithImpl<$Res>
     Object? color = null,
     Object? id = freezed,
   }) {
-    return _then(_$_AddEditNoteState(
+    return _then(_$AddEditNoteStateImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -124,8 +124,8 @@ class __$$_AddEditNoteStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AddEditNoteState implements _AddEditNoteState {
-  _$_AddEditNoteState(
+class _$AddEditNoteStateImpl implements _AddEditNoteState {
+  _$AddEditNoteStateImpl(
       {required this.title,
       required this.content,
       required this.color,
@@ -146,10 +146,10 @@ class _$_AddEditNoteState implements _AddEditNoteState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddEditNoteState &&
+            other is _$AddEditNoteStateImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.color, color) || other.color == color) &&
@@ -162,8 +162,9 @@ class _$_AddEditNoteState implements _AddEditNoteState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddEditNoteStateCopyWith<_$_AddEditNoteState> get copyWith =>
-      __$$_AddEditNoteStateCopyWithImpl<_$_AddEditNoteState>(this, _$identity);
+  _$$AddEditNoteStateImplCopyWith<_$AddEditNoteStateImpl> get copyWith =>
+      __$$AddEditNoteStateImplCopyWithImpl<_$AddEditNoteStateImpl>(
+          this, _$identity);
 }
 
 abstract class _AddEditNoteState implements AddEditNoteState {
@@ -171,7 +172,7 @@ abstract class _AddEditNoteState implements AddEditNoteState {
       {required final String title,
       required final String content,
       required final int color,
-      final int? id}) = _$_AddEditNoteState;
+      final int? id}) = _$AddEditNoteStateImpl;
 
   @override
   String get title;
@@ -183,6 +184,6 @@ abstract class _AddEditNoteState implements AddEditNoteState {
   int? get id;
   @override
   @JsonKey(ignore: true)
-  _$$_AddEditNoteStateCopyWith<_$_AddEditNoteState> get copyWith =>
+  _$$AddEditNoteStateImplCopyWith<_$AddEditNoteStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -75,23 +75,24 @@ class _$AddEditNoteUIEventCopyWithImpl<$Res, $Val extends AddEditNoteUIEvent>
 }
 
 /// @nodoc
-abstract class _$$SaveCopyWith<$Res> {
-  factory _$$SaveCopyWith(_$Save value, $Res Function(_$Save) then) =
-      __$$SaveCopyWithImpl<$Res>;
+abstract class _$$SaveImplCopyWith<$Res> {
+  factory _$$SaveImplCopyWith(
+          _$SaveImpl value, $Res Function(_$SaveImpl) then) =
+      __$$SaveImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SaveCopyWithImpl<$Res>
-    extends _$AddEditNoteUIEventCopyWithImpl<$Res, _$Save>
-    implements _$$SaveCopyWith<$Res> {
-  __$$SaveCopyWithImpl(_$Save _value, $Res Function(_$Save) _then)
+class __$$SaveImplCopyWithImpl<$Res>
+    extends _$AddEditNoteUIEventCopyWithImpl<$Res, _$SaveImpl>
+    implements _$$SaveImplCopyWith<$Res> {
+  __$$SaveImplCopyWithImpl(_$SaveImpl _value, $Res Function(_$SaveImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Save implements Save {
-  const _$Save();
+class _$SaveImpl implements Save {
+  const _$SaveImpl();
 
   @override
   String toString() {
@@ -99,9 +100,9 @@ class _$Save implements Save {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Save);
+        (other.runtimeType == runtimeType && other is _$SaveImpl);
   }
 
   @override
@@ -171,24 +172,24 @@ class _$Save implements Save {
 }
 
 abstract class Save implements AddEditNoteUIEvent {
-  const factory Save() = _$Save;
+  const factory Save() = _$SaveImpl;
 }
 
 /// @nodoc
-abstract class _$$ShowSnackBarCopyWith<$Res> {
-  factory _$$ShowSnackBarCopyWith(
-          _$ShowSnackBar value, $Res Function(_$ShowSnackBar) then) =
-      __$$ShowSnackBarCopyWithImpl<$Res>;
+abstract class _$$ShowSnackBarImplCopyWith<$Res> {
+  factory _$$ShowSnackBarImplCopyWith(
+          _$ShowSnackBarImpl value, $Res Function(_$ShowSnackBarImpl) then) =
+      __$$ShowSnackBarImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ShowSnackBarCopyWithImpl<$Res>
-    extends _$AddEditNoteUIEventCopyWithImpl<$Res, _$ShowSnackBar>
-    implements _$$ShowSnackBarCopyWith<$Res> {
-  __$$ShowSnackBarCopyWithImpl(
-      _$ShowSnackBar _value, $Res Function(_$ShowSnackBar) _then)
+class __$$ShowSnackBarImplCopyWithImpl<$Res>
+    extends _$AddEditNoteUIEventCopyWithImpl<$Res, _$ShowSnackBarImpl>
+    implements _$$ShowSnackBarImplCopyWith<$Res> {
+  __$$ShowSnackBarImplCopyWithImpl(
+      _$ShowSnackBarImpl _value, $Res Function(_$ShowSnackBarImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -196,7 +197,7 @@ class __$$ShowSnackBarCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$ShowSnackBar(
+    return _then(_$ShowSnackBarImpl(
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -207,8 +208,8 @@ class __$$ShowSnackBarCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ShowSnackBar implements ShowSnackBar {
-  const _$ShowSnackBar({required this.message});
+class _$ShowSnackBarImpl implements ShowSnackBar {
+  const _$ShowSnackBarImpl({required this.message});
 
   @override
   final String message;
@@ -219,10 +220,10 @@ class _$ShowSnackBar implements ShowSnackBar {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ShowSnackBar &&
+            other is _$ShowSnackBarImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -232,8 +233,8 @@ class _$ShowSnackBar implements ShowSnackBar {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ShowSnackBarCopyWith<_$ShowSnackBar> get copyWith =>
-      __$$ShowSnackBarCopyWithImpl<_$ShowSnackBar>(this, _$identity);
+  _$$ShowSnackBarImplCopyWith<_$ShowSnackBarImpl> get copyWith =>
+      __$$ShowSnackBarImplCopyWithImpl<_$ShowSnackBarImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -299,10 +300,11 @@ class _$ShowSnackBar implements ShowSnackBar {
 }
 
 abstract class ShowSnackBar implements AddEditNoteUIEvent {
-  const factory ShowSnackBar({required final String message}) = _$ShowSnackBar;
+  const factory ShowSnackBar({required final String message}) =
+      _$ShowSnackBarImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$ShowSnackBarCopyWith<_$ShowSnackBar> get copyWith =>
+  _$$ShowSnackBarImplCopyWith<_$ShowSnackBarImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

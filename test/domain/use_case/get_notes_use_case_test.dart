@@ -21,6 +21,7 @@ void main() {
       Note(title: "title2", content: "content3", color: 2, timestamp: 0),
     ]);
 
+
     var result = await useCase.call(orderType: const OrderType.date(subOrderType: SubOrderType.descending()));
     expect(result, isA<List<Note>>());
     expect(result.first.timestamp, 2);

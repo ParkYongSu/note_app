@@ -110,11 +110,11 @@ class _$OrderTypeCopyWithImpl<$Res, $Val extends OrderType>
 }
 
 /// @nodoc
-abstract class _$$OrderTypeTitleCopyWith<$Res>
+abstract class _$$OrderTypeTitleImplCopyWith<$Res>
     implements $OrderTypeCopyWith<$Res> {
-  factory _$$OrderTypeTitleCopyWith(
-          _$OrderTypeTitle value, $Res Function(_$OrderTypeTitle) then) =
-      __$$OrderTypeTitleCopyWithImpl<$Res>;
+  factory _$$OrderTypeTitleImplCopyWith(_$OrderTypeTitleImpl value,
+          $Res Function(_$OrderTypeTitleImpl) then) =
+      __$$OrderTypeTitleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({SubOrderType subOrderType});
@@ -124,11 +124,11 @@ abstract class _$$OrderTypeTitleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$OrderTypeTitleCopyWithImpl<$Res>
-    extends _$OrderTypeCopyWithImpl<$Res, _$OrderTypeTitle>
-    implements _$$OrderTypeTitleCopyWith<$Res> {
-  __$$OrderTypeTitleCopyWithImpl(
-      _$OrderTypeTitle _value, $Res Function(_$OrderTypeTitle) _then)
+class __$$OrderTypeTitleImplCopyWithImpl<$Res>
+    extends _$OrderTypeCopyWithImpl<$Res, _$OrderTypeTitleImpl>
+    implements _$$OrderTypeTitleImplCopyWith<$Res> {
+  __$$OrderTypeTitleImplCopyWithImpl(
+      _$OrderTypeTitleImpl _value, $Res Function(_$OrderTypeTitleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -136,7 +136,7 @@ class __$$OrderTypeTitleCopyWithImpl<$Res>
   $Res call({
     Object? subOrderType = null,
   }) {
-    return _then(_$OrderTypeTitle(
+    return _then(_$OrderTypeTitleImpl(
       subOrderType: null == subOrderType
           ? _value.subOrderType
           : subOrderType // ignore: cast_nullable_to_non_nullable
@@ -147,8 +147,8 @@ class __$$OrderTypeTitleCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OrderTypeTitle implements OrderTypeTitle {
-  const _$OrderTypeTitle({required this.subOrderType});
+class _$OrderTypeTitleImpl implements OrderTypeTitle {
+  const _$OrderTypeTitleImpl({required this.subOrderType});
 
   @override
   final SubOrderType subOrderType;
@@ -159,10 +159,10 @@ class _$OrderTypeTitle implements OrderTypeTitle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$OrderTypeTitle &&
+            other is _$OrderTypeTitleImpl &&
             (identical(other.subOrderType, subOrderType) ||
                 other.subOrderType == subOrderType));
   }
@@ -173,8 +173,9 @@ class _$OrderTypeTitle implements OrderTypeTitle {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$OrderTypeTitleCopyWith<_$OrderTypeTitle> get copyWith =>
-      __$$OrderTypeTitleCopyWithImpl<_$OrderTypeTitle>(this, _$identity);
+  _$$OrderTypeTitleImplCopyWith<_$OrderTypeTitleImpl> get copyWith =>
+      __$$OrderTypeTitleImplCopyWithImpl<_$OrderTypeTitleImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -247,22 +248,22 @@ class _$OrderTypeTitle implements OrderTypeTitle {
 
 abstract class OrderTypeTitle implements OrderType {
   const factory OrderTypeTitle({required final SubOrderType subOrderType}) =
-      _$OrderTypeTitle;
+      _$OrderTypeTitleImpl;
 
   @override
   SubOrderType get subOrderType;
   @override
   @JsonKey(ignore: true)
-  _$$OrderTypeTitleCopyWith<_$OrderTypeTitle> get copyWith =>
+  _$$OrderTypeTitleImplCopyWith<_$OrderTypeTitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$OrderTypeColorCopyWith<$Res>
+abstract class _$$OrderTypeColorImplCopyWith<$Res>
     implements $OrderTypeCopyWith<$Res> {
-  factory _$$OrderTypeColorCopyWith(
-          _$OrderTypeColor value, $Res Function(_$OrderTypeColor) then) =
-      __$$OrderTypeColorCopyWithImpl<$Res>;
+  factory _$$OrderTypeColorImplCopyWith(_$OrderTypeColorImpl value,
+          $Res Function(_$OrderTypeColorImpl) then) =
+      __$$OrderTypeColorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({SubOrderType subOrderType});
@@ -272,11 +273,11 @@ abstract class _$$OrderTypeColorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$OrderTypeColorCopyWithImpl<$Res>
-    extends _$OrderTypeCopyWithImpl<$Res, _$OrderTypeColor>
-    implements _$$OrderTypeColorCopyWith<$Res> {
-  __$$OrderTypeColorCopyWithImpl(
-      _$OrderTypeColor _value, $Res Function(_$OrderTypeColor) _then)
+class __$$OrderTypeColorImplCopyWithImpl<$Res>
+    extends _$OrderTypeCopyWithImpl<$Res, _$OrderTypeColorImpl>
+    implements _$$OrderTypeColorImplCopyWith<$Res> {
+  __$$OrderTypeColorImplCopyWithImpl(
+      _$OrderTypeColorImpl _value, $Res Function(_$OrderTypeColorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -284,7 +285,7 @@ class __$$OrderTypeColorCopyWithImpl<$Res>
   $Res call({
     Object? subOrderType = null,
   }) {
-    return _then(_$OrderTypeColor(
+    return _then(_$OrderTypeColorImpl(
       subOrderType: null == subOrderType
           ? _value.subOrderType
           : subOrderType // ignore: cast_nullable_to_non_nullable
@@ -295,8 +296,8 @@ class __$$OrderTypeColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OrderTypeColor implements OrderTypeColor {
-  const _$OrderTypeColor({required this.subOrderType});
+class _$OrderTypeColorImpl implements OrderTypeColor {
+  const _$OrderTypeColorImpl({required this.subOrderType});
 
   @override
   final SubOrderType subOrderType;
@@ -307,10 +308,10 @@ class _$OrderTypeColor implements OrderTypeColor {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$OrderTypeColor &&
+            other is _$OrderTypeColorImpl &&
             (identical(other.subOrderType, subOrderType) ||
                 other.subOrderType == subOrderType));
   }
@@ -321,8 +322,9 @@ class _$OrderTypeColor implements OrderTypeColor {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$OrderTypeColorCopyWith<_$OrderTypeColor> get copyWith =>
-      __$$OrderTypeColorCopyWithImpl<_$OrderTypeColor>(this, _$identity);
+  _$$OrderTypeColorImplCopyWith<_$OrderTypeColorImpl> get copyWith =>
+      __$$OrderTypeColorImplCopyWithImpl<_$OrderTypeColorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -395,22 +397,22 @@ class _$OrderTypeColor implements OrderTypeColor {
 
 abstract class OrderTypeColor implements OrderType {
   const factory OrderTypeColor({required final SubOrderType subOrderType}) =
-      _$OrderTypeColor;
+      _$OrderTypeColorImpl;
 
   @override
   SubOrderType get subOrderType;
   @override
   @JsonKey(ignore: true)
-  _$$OrderTypeColorCopyWith<_$OrderTypeColor> get copyWith =>
+  _$$OrderTypeColorImplCopyWith<_$OrderTypeColorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$OrderTypeDateCopyWith<$Res>
+abstract class _$$OrderTypeDateImplCopyWith<$Res>
     implements $OrderTypeCopyWith<$Res> {
-  factory _$$OrderTypeDateCopyWith(
-          _$OrderTypeDate value, $Res Function(_$OrderTypeDate) then) =
-      __$$OrderTypeDateCopyWithImpl<$Res>;
+  factory _$$OrderTypeDateImplCopyWith(
+          _$OrderTypeDateImpl value, $Res Function(_$OrderTypeDateImpl) then) =
+      __$$OrderTypeDateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({SubOrderType subOrderType});
@@ -420,11 +422,11 @@ abstract class _$$OrderTypeDateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$OrderTypeDateCopyWithImpl<$Res>
-    extends _$OrderTypeCopyWithImpl<$Res, _$OrderTypeDate>
-    implements _$$OrderTypeDateCopyWith<$Res> {
-  __$$OrderTypeDateCopyWithImpl(
-      _$OrderTypeDate _value, $Res Function(_$OrderTypeDate) _then)
+class __$$OrderTypeDateImplCopyWithImpl<$Res>
+    extends _$OrderTypeCopyWithImpl<$Res, _$OrderTypeDateImpl>
+    implements _$$OrderTypeDateImplCopyWith<$Res> {
+  __$$OrderTypeDateImplCopyWithImpl(
+      _$OrderTypeDateImpl _value, $Res Function(_$OrderTypeDateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -432,7 +434,7 @@ class __$$OrderTypeDateCopyWithImpl<$Res>
   $Res call({
     Object? subOrderType = null,
   }) {
-    return _then(_$OrderTypeDate(
+    return _then(_$OrderTypeDateImpl(
       subOrderType: null == subOrderType
           ? _value.subOrderType
           : subOrderType // ignore: cast_nullable_to_non_nullable
@@ -443,8 +445,8 @@ class __$$OrderTypeDateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OrderTypeDate implements OrderTypeDate {
-  const _$OrderTypeDate({required this.subOrderType});
+class _$OrderTypeDateImpl implements OrderTypeDate {
+  const _$OrderTypeDateImpl({required this.subOrderType});
 
   @override
   final SubOrderType subOrderType;
@@ -455,10 +457,10 @@ class _$OrderTypeDate implements OrderTypeDate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$OrderTypeDate &&
+            other is _$OrderTypeDateImpl &&
             (identical(other.subOrderType, subOrderType) ||
                 other.subOrderType == subOrderType));
   }
@@ -469,8 +471,8 @@ class _$OrderTypeDate implements OrderTypeDate {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$OrderTypeDateCopyWith<_$OrderTypeDate> get copyWith =>
-      __$$OrderTypeDateCopyWithImpl<_$OrderTypeDate>(this, _$identity);
+  _$$OrderTypeDateImplCopyWith<_$OrderTypeDateImpl> get copyWith =>
+      __$$OrderTypeDateImplCopyWithImpl<_$OrderTypeDateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -543,12 +545,12 @@ class _$OrderTypeDate implements OrderTypeDate {
 
 abstract class OrderTypeDate implements OrderType {
   const factory OrderTypeDate({required final SubOrderType subOrderType}) =
-      _$OrderTypeDate;
+      _$OrderTypeDateImpl;
 
   @override
   SubOrderType get subOrderType;
   @override
   @JsonKey(ignore: true)
-  _$$OrderTypeDateCopyWith<_$OrderTypeDate> get copyWith =>
+  _$$OrderTypeDateImplCopyWith<_$OrderTypeDateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

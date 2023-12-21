@@ -6,7 +6,7 @@ part of 'note.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Note _$$_NoteFromJson(Map<String, dynamic> json) => _$_Note(
+_$NoteImpl _$$NoteImplFromJson(Map<String, dynamic> json) => _$NoteImpl(
       title: json['title'] as String,
       content: json['content'] as String,
       color: json['color'] as int,
@@ -14,7 +14,8 @@ _$_Note _$$_NoteFromJson(Map<String, dynamic> json) => _$_Note(
       id: json['id'] as int?,
     );
 
-Map<String, dynamic> _$$_NoteToJson(_$_Note instance) => <String, dynamic>{
+Map<String, dynamic> _$$NoteImplToJson(_$NoteImpl instance) =>
+    <String, dynamic>{
       'title': instance.title,
       'content': instance.content,
       'color': instance.color,

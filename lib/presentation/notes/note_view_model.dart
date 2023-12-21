@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
 import 'package:note_app/domain/model/note.dart';
 import 'package:note_app/domain/use_case/use_cases.dart';
 import 'package:note_app/domain/util/order_type.dart';
@@ -7,6 +8,7 @@ import 'package:note_app/domain/util/sub_order_type.dart';
 import 'package:note_app/presentation/notes/note_event.dart';
 import 'package:note_app/presentation/notes/notes_state.dart';
 
+@injectable
 class NoteViewModel extends ChangeNotifier {
   final UseCases useCases;
 

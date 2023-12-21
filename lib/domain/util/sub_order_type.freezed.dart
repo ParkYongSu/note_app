@@ -75,25 +75,25 @@ class _$SubOrderTypeCopyWithImpl<$Res, $Val extends SubOrderType>
 }
 
 /// @nodoc
-abstract class _$$AscendingCopyWith<$Res> {
-  factory _$$AscendingCopyWith(
-          _$Ascending value, $Res Function(_$Ascending) then) =
-      __$$AscendingCopyWithImpl<$Res>;
+abstract class _$$AscendingImplCopyWith<$Res> {
+  factory _$$AscendingImplCopyWith(
+          _$AscendingImpl value, $Res Function(_$AscendingImpl) then) =
+      __$$AscendingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$AscendingCopyWithImpl<$Res>
-    extends _$SubOrderTypeCopyWithImpl<$Res, _$Ascending>
-    implements _$$AscendingCopyWith<$Res> {
-  __$$AscendingCopyWithImpl(
-      _$Ascending _value, $Res Function(_$Ascending) _then)
+class __$$AscendingImplCopyWithImpl<$Res>
+    extends _$SubOrderTypeCopyWithImpl<$Res, _$AscendingImpl>
+    implements _$$AscendingImplCopyWith<$Res> {
+  __$$AscendingImplCopyWithImpl(
+      _$AscendingImpl _value, $Res Function(_$AscendingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Ascending implements Ascending {
-  const _$Ascending();
+class _$AscendingImpl implements Ascending {
+  const _$AscendingImpl();
 
   @override
   String toString() {
@@ -101,9 +101,9 @@ class _$Ascending implements Ascending {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Ascending);
+        (other.runtimeType == runtimeType && other is _$AscendingImpl);
   }
 
   @override
@@ -173,29 +173,29 @@ class _$Ascending implements Ascending {
 }
 
 abstract class Ascending implements SubOrderType {
-  const factory Ascending() = _$Ascending;
+  const factory Ascending() = _$AscendingImpl;
 }
 
 /// @nodoc
-abstract class _$$DescendingCopyWith<$Res> {
-  factory _$$DescendingCopyWith(
-          _$Descending value, $Res Function(_$Descending) then) =
-      __$$DescendingCopyWithImpl<$Res>;
+abstract class _$$DescendingImplCopyWith<$Res> {
+  factory _$$DescendingImplCopyWith(
+          _$DescendingImpl value, $Res Function(_$DescendingImpl) then) =
+      __$$DescendingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DescendingCopyWithImpl<$Res>
-    extends _$SubOrderTypeCopyWithImpl<$Res, _$Descending>
-    implements _$$DescendingCopyWith<$Res> {
-  __$$DescendingCopyWithImpl(
-      _$Descending _value, $Res Function(_$Descending) _then)
+class __$$DescendingImplCopyWithImpl<$Res>
+    extends _$SubOrderTypeCopyWithImpl<$Res, _$DescendingImpl>
+    implements _$$DescendingImplCopyWith<$Res> {
+  __$$DescendingImplCopyWithImpl(
+      _$DescendingImpl _value, $Res Function(_$DescendingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Descending implements Descending {
-  const _$Descending();
+class _$DescendingImpl implements Descending {
+  const _$DescendingImpl();
 
   @override
   String toString() {
@@ -203,9 +203,9 @@ class _$Descending implements Descending {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Descending);
+        (other.runtimeType == runtimeType && other is _$DescendingImpl);
   }
 
   @override
@@ -275,5 +275,5 @@ class _$Descending implements Descending {
 }
 
 abstract class Descending implements SubOrderType {
-  const factory Descending() = _$Descending;
+  const factory Descending() = _$DescendingImpl;
 }

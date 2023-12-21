@@ -102,11 +102,11 @@ class _$NotesStateCopyWithImpl<$Res, $Val extends NotesState>
 }
 
 /// @nodoc
-abstract class _$$_NotesStateCopyWith<$Res>
+abstract class _$$NotesStateImplCopyWith<$Res>
     implements $NotesStateCopyWith<$Res> {
-  factory _$$_NotesStateCopyWith(
-          _$_NotesState value, $Res Function(_$_NotesState) then) =
-      __$$_NotesStateCopyWithImpl<$Res>;
+  factory _$$NotesStateImplCopyWith(
+          _$NotesStateImpl value, $Res Function(_$NotesStateImpl) then) =
+      __$$NotesStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -122,11 +122,11 @@ abstract class _$$_NotesStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NotesStateCopyWithImpl<$Res>
-    extends _$NotesStateCopyWithImpl<$Res, _$_NotesState>
-    implements _$$_NotesStateCopyWith<$Res> {
-  __$$_NotesStateCopyWithImpl(
-      _$_NotesState _value, $Res Function(_$_NotesState) _then)
+class __$$NotesStateImplCopyWithImpl<$Res>
+    extends _$NotesStateCopyWithImpl<$Res, _$NotesStateImpl>
+    implements _$$NotesStateImplCopyWith<$Res> {
+  __$$NotesStateImplCopyWithImpl(
+      _$NotesStateImpl _value, $Res Function(_$NotesStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -137,7 +137,7 @@ class __$$_NotesStateCopyWithImpl<$Res>
     Object? isToggleOrderSection = null,
     Object? currentDeletedNote = freezed,
   }) {
-    return _then(_$_NotesState(
+    return _then(_$NotesStateImpl(
       notes: null == notes
           ? _value._notes
           : notes // ignore: cast_nullable_to_non_nullable
@@ -160,8 +160,8 @@ class __$$_NotesStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_NotesState implements _NotesState {
-  _$_NotesState(
+class _$NotesStateImpl implements _NotesState {
+  _$NotesStateImpl(
       {required final List<Note> notes,
       required this.orderType,
       required this.isToggleOrderSection,
@@ -189,10 +189,10 @@ class _$_NotesState implements _NotesState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NotesState &&
+            other is _$NotesStateImpl &&
             const DeepCollectionEquality().equals(other._notes, _notes) &&
             (identical(other.orderType, orderType) ||
                 other.orderType == orderType) &&
@@ -213,8 +213,8 @@ class _$_NotesState implements _NotesState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NotesStateCopyWith<_$_NotesState> get copyWith =>
-      __$$_NotesStateCopyWithImpl<_$_NotesState>(this, _$identity);
+  _$$NotesStateImplCopyWith<_$NotesStateImpl> get copyWith =>
+      __$$NotesStateImplCopyWithImpl<_$NotesStateImpl>(this, _$identity);
 }
 
 abstract class _NotesState implements NotesState {
@@ -222,7 +222,7 @@ abstract class _NotesState implements NotesState {
       {required final List<Note> notes,
       required final OrderType orderType,
       required final bool isToggleOrderSection,
-      final Note? currentDeletedNote}) = _$_NotesState;
+      final Note? currentDeletedNote}) = _$NotesStateImpl;
 
   @override
   List<Note> get notes;
@@ -234,6 +234,6 @@ abstract class _NotesState implements NotesState {
   Note? get currentDeletedNote;
   @override
   @JsonKey(ignore: true)
-  _$$_NotesStateCopyWith<_$_NotesState> get copyWith =>
+  _$$NotesStateImplCopyWith<_$NotesStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

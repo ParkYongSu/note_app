@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:note_app/domain/model/note.dart';
 import 'package:note_app/presentation/add_edit_note/add_edit_note_event.dart';
 import 'package:note_app/presentation/add_edit_note/add_edit_note_ui_event.dart';
 import 'package:note_app/presentation/add_edit_note/add_edit_note_view_model.dart';
@@ -8,7 +9,9 @@ import 'package:note_app/ui/colors.dart';
 import 'package:provider/provider.dart';
 
 class AddEditNoteScreen extends StatefulWidget {
-  const AddEditNoteScreen({Key? key}) : super(key: key);
+  final Note? note;
+
+  const AddEditNoteScreen({Key? key, this.note}) : super(key: key);
 
   @override
   State<AddEditNoteScreen> createState() => _AddEditNoteScreenState();
@@ -38,8 +41,18 @@ class _AddEditNoteScreenState extends State<AddEditNoteScreen> {
   void initState() {
     super.initState();
     final viewModel = context.read<AddEditNoteViewModel>();
-    _titleController.text = viewModel.state.title;
-    _contentController.text = viewModel.state.content;
+
+    Future.microtask(() {
+      if (widget.note != null) {
+        _titleController.text = widget.note!.title;
+        _contentController.text = widget.note!.content;
+        viewModel.onEvent(
+          event: AddEditNoteEvent.changeColor(
+            color: widget.note!.color,
+          ),
+        );
+      }
+    });
 
     _subscription = viewModel.stream.listen((event) {
       event.when(

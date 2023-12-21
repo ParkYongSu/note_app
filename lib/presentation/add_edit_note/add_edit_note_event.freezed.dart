@@ -87,20 +87,20 @@ class _$AddEditNoteEventCopyWithImpl<$Res, $Val extends AddEditNoteEvent>
 }
 
 /// @nodoc
-abstract class _$$ChangeColorCopyWith<$Res> {
-  factory _$$ChangeColorCopyWith(
-          _$ChangeColor value, $Res Function(_$ChangeColor) then) =
-      __$$ChangeColorCopyWithImpl<$Res>;
+abstract class _$$ChangeColorImplCopyWith<$Res> {
+  factory _$$ChangeColorImplCopyWith(
+          _$ChangeColorImpl value, $Res Function(_$ChangeColorImpl) then) =
+      __$$ChangeColorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int color});
 }
 
 /// @nodoc
-class __$$ChangeColorCopyWithImpl<$Res>
-    extends _$AddEditNoteEventCopyWithImpl<$Res, _$ChangeColor>
-    implements _$$ChangeColorCopyWith<$Res> {
-  __$$ChangeColorCopyWithImpl(
-      _$ChangeColor _value, $Res Function(_$ChangeColor) _then)
+class __$$ChangeColorImplCopyWithImpl<$Res>
+    extends _$AddEditNoteEventCopyWithImpl<$Res, _$ChangeColorImpl>
+    implements _$$ChangeColorImplCopyWith<$Res> {
+  __$$ChangeColorImplCopyWithImpl(
+      _$ChangeColorImpl _value, $Res Function(_$ChangeColorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -108,7 +108,7 @@ class __$$ChangeColorCopyWithImpl<$Res>
   $Res call({
     Object? color = null,
   }) {
-    return _then(_$ChangeColor(
+    return _then(_$ChangeColorImpl(
       color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -119,8 +119,8 @@ class __$$ChangeColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ChangeColor implements ChangeColor {
-  const _$ChangeColor({required this.color});
+class _$ChangeColorImpl implements ChangeColor {
+  const _$ChangeColorImpl({required this.color});
 
   @override
   final int color;
@@ -131,10 +131,10 @@ class _$ChangeColor implements ChangeColor {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ChangeColor &&
+            other is _$ChangeColorImpl &&
             (identical(other.color, color) || other.color == color));
   }
 
@@ -144,8 +144,8 @@ class _$ChangeColor implements ChangeColor {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangeColorCopyWith<_$ChangeColor> get copyWith =>
-      __$$ChangeColorCopyWithImpl<_$ChangeColor>(this, _$identity);
+  _$$ChangeColorImplCopyWith<_$ChangeColorImpl> get copyWith =>
+      __$$ChangeColorImplCopyWithImpl<_$ChangeColorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -223,29 +223,29 @@ class _$ChangeColor implements ChangeColor {
 }
 
 abstract class ChangeColor implements AddEditNoteEvent {
-  const factory ChangeColor({required final int color}) = _$ChangeColor;
+  const factory ChangeColor({required final int color}) = _$ChangeColorImpl;
 
   int get color;
   @JsonKey(ignore: true)
-  _$$ChangeColorCopyWith<_$ChangeColor> get copyWith =>
+  _$$ChangeColorImplCopyWith<_$ChangeColorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ChangeTitleCopyWith<$Res> {
-  factory _$$ChangeTitleCopyWith(
-          _$ChangeTitle value, $Res Function(_$ChangeTitle) then) =
-      __$$ChangeTitleCopyWithImpl<$Res>;
+abstract class _$$ChangeTitleImplCopyWith<$Res> {
+  factory _$$ChangeTitleImplCopyWith(
+          _$ChangeTitleImpl value, $Res Function(_$ChangeTitleImpl) then) =
+      __$$ChangeTitleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String title});
 }
 
 /// @nodoc
-class __$$ChangeTitleCopyWithImpl<$Res>
-    extends _$AddEditNoteEventCopyWithImpl<$Res, _$ChangeTitle>
-    implements _$$ChangeTitleCopyWith<$Res> {
-  __$$ChangeTitleCopyWithImpl(
-      _$ChangeTitle _value, $Res Function(_$ChangeTitle) _then)
+class __$$ChangeTitleImplCopyWithImpl<$Res>
+    extends _$AddEditNoteEventCopyWithImpl<$Res, _$ChangeTitleImpl>
+    implements _$$ChangeTitleImplCopyWith<$Res> {
+  __$$ChangeTitleImplCopyWithImpl(
+      _$ChangeTitleImpl _value, $Res Function(_$ChangeTitleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -253,7 +253,7 @@ class __$$ChangeTitleCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
   }) {
-    return _then(_$ChangeTitle(
+    return _then(_$ChangeTitleImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -264,8 +264,8 @@ class __$$ChangeTitleCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ChangeTitle implements ChangeTitle {
-  const _$ChangeTitle({required this.title});
+class _$ChangeTitleImpl implements ChangeTitle {
+  const _$ChangeTitleImpl({required this.title});
 
   @override
   final String title;
@@ -276,10 +276,10 @@ class _$ChangeTitle implements ChangeTitle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ChangeTitle &&
+            other is _$ChangeTitleImpl &&
             (identical(other.title, title) || other.title == title));
   }
 
@@ -289,8 +289,8 @@ class _$ChangeTitle implements ChangeTitle {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangeTitleCopyWith<_$ChangeTitle> get copyWith =>
-      __$$ChangeTitleCopyWithImpl<_$ChangeTitle>(this, _$identity);
+  _$$ChangeTitleImplCopyWith<_$ChangeTitleImpl> get copyWith =>
+      __$$ChangeTitleImplCopyWithImpl<_$ChangeTitleImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -368,29 +368,29 @@ class _$ChangeTitle implements ChangeTitle {
 }
 
 abstract class ChangeTitle implements AddEditNoteEvent {
-  const factory ChangeTitle({required final String title}) = _$ChangeTitle;
+  const factory ChangeTitle({required final String title}) = _$ChangeTitleImpl;
 
   String get title;
   @JsonKey(ignore: true)
-  _$$ChangeTitleCopyWith<_$ChangeTitle> get copyWith =>
+  _$$ChangeTitleImplCopyWith<_$ChangeTitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ChangeContentCopyWith<$Res> {
-  factory _$$ChangeContentCopyWith(
-          _$ChangeContent value, $Res Function(_$ChangeContent) then) =
-      __$$ChangeContentCopyWithImpl<$Res>;
+abstract class _$$ChangeContentImplCopyWith<$Res> {
+  factory _$$ChangeContentImplCopyWith(
+          _$ChangeContentImpl value, $Res Function(_$ChangeContentImpl) then) =
+      __$$ChangeContentImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String content});
 }
 
 /// @nodoc
-class __$$ChangeContentCopyWithImpl<$Res>
-    extends _$AddEditNoteEventCopyWithImpl<$Res, _$ChangeContent>
-    implements _$$ChangeContentCopyWith<$Res> {
-  __$$ChangeContentCopyWithImpl(
-      _$ChangeContent _value, $Res Function(_$ChangeContent) _then)
+class __$$ChangeContentImplCopyWithImpl<$Res>
+    extends _$AddEditNoteEventCopyWithImpl<$Res, _$ChangeContentImpl>
+    implements _$$ChangeContentImplCopyWith<$Res> {
+  __$$ChangeContentImplCopyWithImpl(
+      _$ChangeContentImpl _value, $Res Function(_$ChangeContentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -398,7 +398,7 @@ class __$$ChangeContentCopyWithImpl<$Res>
   $Res call({
     Object? content = null,
   }) {
-    return _then(_$ChangeContent(
+    return _then(_$ChangeContentImpl(
       content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -409,8 +409,8 @@ class __$$ChangeContentCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ChangeContent implements ChangeContent {
-  const _$ChangeContent({required this.content});
+class _$ChangeContentImpl implements ChangeContent {
+  const _$ChangeContentImpl({required this.content});
 
   @override
   final String content;
@@ -421,10 +421,10 @@ class _$ChangeContent implements ChangeContent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ChangeContent &&
+            other is _$ChangeContentImpl &&
             (identical(other.content, content) || other.content == content));
   }
 
@@ -434,8 +434,8 @@ class _$ChangeContent implements ChangeContent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangeContentCopyWith<_$ChangeContent> get copyWith =>
-      __$$ChangeContentCopyWithImpl<_$ChangeContent>(this, _$identity);
+  _$$ChangeContentImplCopyWith<_$ChangeContentImpl> get copyWith =>
+      __$$ChangeContentImplCopyWithImpl<_$ChangeContentImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -514,32 +514,33 @@ class _$ChangeContent implements ChangeContent {
 
 abstract class ChangeContent implements AddEditNoteEvent {
   const factory ChangeContent({required final String content}) =
-      _$ChangeContent;
+      _$ChangeContentImpl;
 
   String get content;
   @JsonKey(ignore: true)
-  _$$ChangeContentCopyWith<_$ChangeContent> get copyWith =>
+  _$$ChangeContentImplCopyWith<_$ChangeContentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SaveCopyWith<$Res> {
-  factory _$$SaveCopyWith(_$Save value, $Res Function(_$Save) then) =
-      __$$SaveCopyWithImpl<$Res>;
+abstract class _$$SaveImplCopyWith<$Res> {
+  factory _$$SaveImplCopyWith(
+          _$SaveImpl value, $Res Function(_$SaveImpl) then) =
+      __$$SaveImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SaveCopyWithImpl<$Res>
-    extends _$AddEditNoteEventCopyWithImpl<$Res, _$Save>
-    implements _$$SaveCopyWith<$Res> {
-  __$$SaveCopyWithImpl(_$Save _value, $Res Function(_$Save) _then)
+class __$$SaveImplCopyWithImpl<$Res>
+    extends _$AddEditNoteEventCopyWithImpl<$Res, _$SaveImpl>
+    implements _$$SaveImplCopyWith<$Res> {
+  __$$SaveImplCopyWithImpl(_$SaveImpl _value, $Res Function(_$SaveImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Save implements Save {
-  const _$Save();
+class _$SaveImpl implements Save {
+  const _$SaveImpl();
 
   @override
   String toString() {
@@ -547,9 +548,9 @@ class _$Save implements Save {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Save);
+        (other.runtimeType == runtimeType && other is _$SaveImpl);
   }
 
   @override
@@ -631,5 +632,5 @@ class _$Save implements Save {
 }
 
 abstract class Save implements AddEditNoteEvent {
-  const factory Save() = _$Save;
+  const factory Save() = _$SaveImpl;
 }
